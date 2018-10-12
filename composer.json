@@ -1,0 +1,20 @@
+{
+    "name": "yidas/pagination",
+    "description": "PHP Paginator with Pager Widget (pure PHP, CI, Yii, Laravel support)",
+    "keywords": ["php", "pagination", "linkpager", "CodeIgniter"],
+    "homepage": "https://github.com/yidas/php-pagination",
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/yidas/php-pagination/issues",
+        "source": "https://github.com/yidas/php-pagination"
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "yidas\\": "src/"
+        }
+    }
+}
