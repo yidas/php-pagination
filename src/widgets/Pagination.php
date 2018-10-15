@@ -195,6 +195,19 @@ class Pagination
                 }
             }
         }
+        elseif ($this->pagination->pageCount < 1) {
+
+            // Empty
+            $this->_buttonStack[] = 1;
+        }
+        else {
+
+            // Under count number
+            for ($i=1; $i <= $this->pagination->pageCount; $i++) { 
+                
+                $this->_buttonStack[] = $i;
+            }
+        }
 
         // Link Attributes to html string
         $linkAttributes = '';

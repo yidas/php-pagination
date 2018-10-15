@@ -74,6 +74,7 @@ $query = $this->db->where('type', 'C');
 $countQuery = clone $query;
 
 // Get total count from cloned query
+// Or you could use count_all_results('', false) to keep query instead of using `clone`
 $count = $countQuery->count_all_results();
 
 // Initialize a Data Pagination with previous count number
@@ -356,7 +357,8 @@ $query = $this->Post_model->find()
 $countQuery = clone $query;
 
 // Get total count from cloned query
-$count = $countQuery->count_all_results();
+// Or you could use count(false) to keep query instead of using `clone`
+$count = $countQuery->count();
 
 // Initialize a Data Pagination with previous count number
 $pagination = new \yidas\data\Pagination([
