@@ -215,6 +215,9 @@ class Pagination
             $linkAttributes .= "{$key}=\"{$value}\" ";
         }
 
+        $isFirst = ($page<=1) ? true : false;
+        $isLast = ($this->pagination->pageCount<=$page) ? true : false;
+
         include __DIR__ . '/views/bootstrap.php';
 
         return;
