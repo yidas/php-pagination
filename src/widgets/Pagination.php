@@ -6,7 +6,7 @@ namespace yidas\widgets;
  * Pagination Widget
  * 
  * @author  Nick Tsai <myintaer@gmail.com>
- * @since   1.0.1 
+ * @since   1.0.2
  */
 class Pagination
 {
