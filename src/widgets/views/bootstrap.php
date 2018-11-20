@@ -3,7 +3,7 @@
     <?php if($this->firstPageLabel):?>
     <li class="<?=$this->pageCssClass?> <?=$this->firstPageCssClass?> <?php if($isFirst):?>disabled<?php endif ?>">
       <?php if($isFirst):?>
-      <span><?=$this->firstPageLabel?></span>
+      <span <?=$linkAttributes?>><?=$this->firstPageLabel?></span>
       <?php else: ?>
       <a <?=$linkAttributes?> href="<?=$this->pagination->createUrl(1);?>"><?=$this->firstPageLabel?></a>
       <?php endif ?>
@@ -11,7 +11,7 @@
     <?php endif ?>
     <li class="<?=$this->pageCssClass?> <?=$this->prevPageCssClass?> <?php if($isFirst):?>disabled<?php endif ?>">
       <?php if($isFirst):?>
-      <span><?=$this->prevPageLabel?></span>
+      <span <?=$linkAttributes?>><?=$this->prevPageLabel?></span>
       <?php else: ?>
       <a <?=$linkAttributes?> href="<?=$this->pagination->createUrl($page-1);?>"><?=$this->prevPageLabel?></a>
       <?php endif ?>
@@ -23,7 +23,7 @@
     <?php endforeach ?>
     <li class="<?=$this->pageCssClass?> <?=$this->nextPageCssClass?> <?php if($isLast):?>disabled<?php endif ?>">
       <?php if($isLast):?>
-      <span><?=$this->nextPageLabel?></span>
+      <span <?=$linkAttributes?>><?=$this->nextPageLabel?></span>
       <?php else: ?>
       <a <?=$linkAttributes?> href="<?=$this->pagination->createUrl($page+1);?>"><?=$this->nextPageLabel?></a>
       <?php endif ?>
@@ -31,7 +31,7 @@
     <?php if($this->lastPageLabel):?>
     <li class="<?=$this->pageCssClass?> <?=$this->lastPageCssClass?> <?php if($isLast):?>disabled<?php endif ?>">
       <?php if($isLast):?>
-      <span><?=$this->lastPageLabel?></span>
+      <span <?=$linkAttributes?>><?=$this->lastPageLabel?></span>
       <?php else: ?>
       <a <?=$linkAttributes?> href="<?=$this->pagination->createUrl($this->pagination->pageCount);?>"><?=$this->lastPageLabel?></a>
       <?php endif ?>

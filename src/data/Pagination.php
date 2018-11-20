@@ -8,7 +8,7 @@ use Exception;
  * Pagination
  * 
  * @author  Nick Tsai <myintaer@gmail.com>
- * @version 1.0.0 
+ * @version 1.0.4
  */
 class Pagination
 {
@@ -27,7 +27,7 @@ class Pagination
     public $offset;
 
     /**
-     * The zero-based current page number
+     * The current page number (zero-based). The default value is 1, meaning the first page.
      *
      * @var integer
      */

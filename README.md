@@ -157,7 +157,7 @@ $pagination = new \yidas\data\Pagination([
     'totalCount' => $count,
     'pergpage' => 10,
 ]);
-$pagination->offst
+// ...use $pagination offset/limit info for your query
 ```
 
 For more parameters, you could refer to [API Documentation](#api-documentation).
@@ -393,7 +393,7 @@ API DOCUMENTATION
 |:--            |:--    |:--           |
 |$limit         |integer|The limit of the data|
 |$offset        |integer|The offset of the data|
-|$page          |integer|The zero-based current page number|
+|$page          |integer|The current page number (zero-based). The default value is 1, meaning the first page.|
 |$pageCount     |integer|Number of pages|
 |$pageParam     |string |Name of the parameter storing the current page index, default value is `page`|
 |$perPage       |integer|The number of items per page, default value is 20|
