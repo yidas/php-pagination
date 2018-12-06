@@ -280,6 +280,9 @@ class Pagination extends BaseWidget
     
     // The text label for the "previous" page button
     public $prevPageLabel = '<i class="fa fa-caret-left" aria-hidden="true"></i>';
+    
+    // <ul> class. For example, 'pagination-sm' for Bootstrap small size.
+    public $ulCssClass = '';
 }
 ```
 
@@ -419,6 +422,7 @@ API DOCUMENTATION
 |$nextPageCssClass|string|The CSS class for the "next" page button|
 |$prevPageCssClass|string|The CSS class for the "previous" page button|
 |$pageCssClass|string   |The CSS class for the each page button, default value is `page-item`|
+|$ulCssClass |string   |The CSS class for the ul element of pagination. For example, 'pagination-sm' for Bootstrap small size.|
 |$linkAttributes|array  |HTML attributes for the link in a pager container tag, default value is ['class' => 'page-link']|
 
 ---

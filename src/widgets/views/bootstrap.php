@@ -1,5 +1,5 @@
 <nav aria-label="Page navigation example">
-  <ul class="pagination <?php if($this->alignCenter):?>justify-content-center<?php endif?>">
+  <ul class="pagination <?php if($this->alignCenter):?>justify-content-center<?php endif?> <?=$this->ulCssClass?>">
     <?php if($this->firstPageLabel):?>
     <li class="<?=$this->pageCssClass?> <?=$this->firstPageCssClass?> <?php if($isFirst):?>disabled<?php endif ?>">
       <?php if($isFirst):?>

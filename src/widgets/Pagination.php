@@ -100,6 +100,15 @@ class Pagination
      * @var array
      */
     public $linkAttributes = ['class' => 'page-link'];
+
+    /**
+     * The CSS class for the ul element of pagination
+     * 
+     * For example, 'pagination-sm' for Bootstrap small size.
+     *
+     * @var string
+     */
+    public $ulCssClass = '';
     
     /**
      * Default options
