@@ -236,7 +236,7 @@ echo  Pagination::widget([
 
 #### Customized View
 
-You could customized your pagination view then set into Pagination Widget.
+The default widget view is for Bootstrap(`bootstrap`), you could customized your pagination view then set into Pagination Widget.
 
 ```php
 use yidas\widgets\Pagination;
@@ -246,6 +246,8 @@ echo  Pagination::widget([
     'view' => $appPagerViewPath,
 ]);
 ```
+
+> You could also choose library's template view: `bootstrap`, `simple`
 
 #### Inheritance
 
@@ -424,6 +426,7 @@ API DOCUMENTATION
 |$pageCssClass|string   |The CSS class for the each page button, default value is `page-item`|
 |$ulCssClass |string   |The CSS class for the ul element of pagination. For example, 'pagination-sm' for Bootstrap small size.|
 |$linkAttributes|array  |HTML attributes for the link in a pager container tag, default value is ['class' => 'page-link']|
+|$view          |string |The view name or absolute file path that can be used to render view. (Template: `bootstrap`, `simple`)|
 
 ---
 

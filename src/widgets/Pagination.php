@@ -97,9 +97,9 @@ class Pagination
     /**
      * HTML attributes for the link in a pager container tag
      *
-     * @var array
+     * @var array ['{attribute}' => '{value}']
      */
-    public $linkAttributes = ['class' => 'page-link'];
+    public $linkAttributes = [];
 
     /**
      * The CSS class for the ul element of pagination
@@ -109,6 +109,15 @@ class Pagination
      * @var string
      */
     public $ulCssClass = '';
+
+    /**
+     * The view name or absolute file path that can be used to render view.
+     * 
+     * Template: 'bootstrap', 'simple'
+     *
+     * @var string view name or absolute file path
+     */
+    public $view = 'bootstrap';
     
     /**
      * Default options
@@ -227,7 +236,12 @@ class Pagination
         $isFirst = ($page<=1) ? true : false;
         $isLast = ($this->pagination->pageCount<=$page) ? true : false;
 
-        include __DIR__ . '/views/bootstrap.php';
+        // Choose view
+        $viewFile = (in_array(substr($this->view, 0, 1), [DIRECTORY_SEPARATOR, '/']))
+            ? $this->view
+            : __DIR__ . "/views/{$this->view}.php";
+        // Render view
+        include $viewFile;
 
         return;
     }
