@@ -4,7 +4,6 @@
 PHP Paginator with Pager Widget (pure PHP, CI, Yii, Laravel support)
 
 [![Latest Stable Version](https://poser.pugx.org/yidas/pagination/v/stable?format=flat-square)](https://packagist.org/packages/yidas/pagination)
-[![Latest Unstable Version](https://poser.pugx.org/yidas/pagination/v/unstable?format=flat-square)](https://packagist.org/packages/yidas/pagination)
 [![License](https://poser.pugx.org/yidas/pagination/license?format=flat-square)](https://packagist.org/packages/yidas/pagination)
 
 Features
@@ -236,18 +235,29 @@ echo  Pagination::widget([
 
 #### Customized View
 
-The default widget view is for Bootstrap(`bootstrap`), you could customized your pagination view then set into Pagination Widget.
+The default widget view is for Bootstrap(`bootstrap`), you could choose a template view for your Pagination Widget:
 
 ```php
-use yidas\widgets\Pagination;
-
-echo  Pagination::widget([
+echo  \yidas\widgets\Pagination::widget([
     'pagination' => $pagination,
-    'view' => $appPagerViewPath,
+    'view' => 'simple',
 ]);
 ```
 
-> You could also choose library's template view: `bootstrap`, `simple`
+|Template |Description|
+|:--------|:----------|
+|bootstrap|Default view, supports for Bootstrap 3 and 4|
+|simple   |Simple `<div>` with `<a>` tags for pure HTML/CSS style|
+
+
+You can also use your customized view for Pagination widget:
+
+```php
+echo  \yidas\widgets\Pagination::widget([
+    'pagination' => $pagination,
+    'view' => __DIR__ . '/../widgets/pagination_view.php',
+]);
+```
 
 #### Inheritance
 
@@ -426,7 +436,7 @@ API DOCUMENTATION
 |$pageCssClass|string   |The CSS class for the each page button, default value is `page-item`|
 |$ulCssClass |string   |The CSS class for the ul element of pagination. For example, 'pagination-sm' for Bootstrap small size.|
 |$linkAttributes|array  |HTML attributes for the link in a pager container tag, default value is ['class' => 'page-link']|
-|$view          |string |The view name or absolute file path that can be used to render view. (Template: `bootstrap`, `simple`)|
+|$view          |string |The view name or absolute file path that can be used to render view. ([Template view choices](#customized-view))|
 
 ---
 

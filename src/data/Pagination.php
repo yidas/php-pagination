@@ -8,7 +8,7 @@ use Exception;
  * Pagination
  * 
  * @author  Nick Tsai <myintaer@gmail.com>
- * @version 1.0.5
+ * @version 1.0.7
  */
 class Pagination
 {
@@ -175,16 +175,16 @@ class Pagination
      * @param integer $perPage
      * @return string
      */
-    public function createUrl($page, $prePage=null)
+    public function createUrl($page, $perPage=null)
     {
         $requestUri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
         // Add or reset page parameter
-        $_GET[$this->pageParam] = (int) $page;
+        $params[$this->pageParam] = (int) $page;
         if ($this->perPageParam) {
-            $_GET[$this->perPageParam] = ($prePage) ? $prePage : $this->perPage;
+            $params[$this->perPageParam] = ($perPage) ? $perPage : $this->perPage;
         }
         // Build URL
-        $url = "//{$_SERVER['HTTP_HOST']}{$requestUri}?" . http_build_query($_GET);
+        $url = "//{$_SERVER['HTTP_HOST']}{$requestUri}?" . http_build_query(array_merge($_GET, $params));
 
         return $url;
     }
