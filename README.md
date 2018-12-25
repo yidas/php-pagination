@@ -260,8 +260,6 @@ echo  \yidas\widgets\Pagination::widget([
 ]);
 ```
 
-> You could also choose library's template view: `bootstrap`, `simple`
-
 #### Inheritance
 
 You could build your application Pagination Widget with styles Inherited from `yidas\widgets\Pagination`. For example:
