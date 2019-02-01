@@ -4,7 +4,6 @@
 PHP Paginator with Pager Widget (pure PHP, CI, Yii, Laravel support)
 
 [![Latest Stable Version](https://poser.pugx.org/yidas/pagination/v/stable?format=flat-square)](https://packagist.org/packages/yidas/pagination)
-[![Latest Unstable Version](https://poser.pugx.org/yidas/pagination/v/unstable?format=flat-square)](https://packagist.org/packages/yidas/pagination)
 [![License](https://poser.pugx.org/yidas/pagination/license?format=flat-square)](https://packagist.org/packages/yidas/pagination)
 
 Features
