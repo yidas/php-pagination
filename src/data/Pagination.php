@@ -179,12 +179,15 @@ class Pagination
     {
         $requestUri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
         // Add or reset page parameter
-        $_GET[$this->pageParam] = (int) $page;
+        $isPage = (int) $page;
+        $ppParam = '';
         if ($this->perPageParam) {
-            $_GET[$this->perPageParam] = ($prePage) ? $prePage : $this->perPage;
+            $isPerPage = ($prePage) ? $prePage : $this->perPage;
+            $ppParam = "&{$this->perPageParam}={$isPerPage}";
         }
+
         // Build URL
-        $url = "//{$_SERVER['HTTP_HOST']}{$requestUri}?" . http_build_query($_GET);
+        $url = "//{$_SERVER['HTTP_HOST']}{$requestUri}?" . http_build_query($_GET) . "&{$this->pageParam}={$isPage}{$ppParam}";
 
         return $url;
     }
