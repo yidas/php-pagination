@@ -74,7 +74,7 @@ class Pagination
      *
      * @var array
      */
-    public $params;
+    public $params = [];
 
     /**
      * Total number of items
@@ -183,8 +183,10 @@ class Pagination
         if ($this->perPageParam) {
             $params[$this->perPageParam] = ($perPage) ? $perPage : $this->perPage;
         }
+        // Verify $this->params
+        $this->params = is_array($this->params) ? $this->params : [];
         // Build URL
-        $url = "//{$_SERVER['HTTP_HOST']}{$requestUri}?" . http_build_query(array_merge($_GET, $params));
+        $url = "//{$_SERVER['HTTP_HOST']}{$requestUri}?" . http_build_query(array_merge($_GET, $this->params, $params));
 
         return $url;
     }

@@ -7,6 +7,9 @@ $count = 1000;
 
 $pagination = new \yidas\data\Pagination([
     'totalCount' => $count,
+    'params' => [
+        'key' => 'value',
+    ],
 ]);
 
 ?>
