@@ -8,7 +8,7 @@ use Exception;
  * Pagination
  * 
  * @author  Nick Tsai <myintaer@gmail.com>
- * @version 1.0.7
+ * @version 1.1.0
  */
 class Pagination
 {
