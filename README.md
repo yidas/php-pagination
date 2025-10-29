@@ -1,5 +1,10 @@
-***php*** Pagination
-===============
+<p align="center">
+    <a href="https://www.php.net/" target="_blank">
+        <img src="https://www.php.net/images/logos/php-logo-white.svg" width="126px">
+    </a>
+    <h1 align="center"><i>php</i> Pagination</h1>
+    <br>
+</p>
 
 PHP Paginator with Pager Widget (pure PHP, CI, Yii, Laravel support)
 
